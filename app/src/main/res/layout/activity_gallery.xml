@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Gallery">
+
+    <TextView
+        android:id="@+id/no_photos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ваша галерея пока пуста :("
+        android:visibility="visible"
+        android:layout_centerInParent="true"
+        android:textSize="20dp"
+        android:fontFamily="@font/rubik"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/gallery_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="-10dp"
+        android:layout_marginBottom="-10dp"
+        android:layout_below="@+id/gallery_header"
+        android:layout_above="@+id/gallery_footer"
+        app:layoutManager="LinearLayoutManager"/>
+
+    <LinearLayout
+        android:id="@+id/gallery_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@android:color/transparent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:cardElevation="10dp"
+            app:contentPadding="10dp"
+            android:backgroundTint="?attr/brgrBackground">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/back_gallery"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center_vertical|start"
+                android:background="@drawable/arrow"
+                android:backgroundTint="?attr/brgrRegularText"
+                android:onClick="goToHomeScreen"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/rubik_bold"
+                android:text="галерея"
+                android:textColor="?attr/brgrRegularText"
+                android:textSize="32dp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@drawable/bottom_shadow"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/gallery_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/transparent">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@drawable/top_shadow" />
+
+        <Button
+            android:id="@+id/add_photo"
+            style="@style/AppTheme.Button.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="goToPhotoUploading"
+            android:text="Добавить фото"
+            android:layout_marginVertical="10dp"
+            android:layout_marginHorizontal="@dimen/page_padding"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

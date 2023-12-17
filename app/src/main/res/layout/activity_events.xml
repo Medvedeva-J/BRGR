@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/root_events"
+    tools:context=".MyEvents">
+
+    <LinearLayout
+        android:id="@+id/events_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:contentPadding="10dp"
+            android:outlineSpotShadowColor="?attr/brgrRegularText"
+            android:backgroundTint="?attr/brgrBackground">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/back_events"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center_vertical|start"
+                android:background="@drawable/arrow"
+                android:backgroundTint="?attr/brgrRegularText"
+                android:onClick="goToHomeScreen" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/rubik_bold"
+                android:text="Мои встречи"
+                android:textColor="?attr/brgrRegularText"
+                android:textSize="32dp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@drawable/bottom_shadow"
+            android:layout_below="@id/events_header"/>
+    </LinearLayout>
+
+<!--    <ListView-->
+    <ListView
+        android:id="@+id/events_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/events_header"
+        android:layout_above="@+id/events_footer"/>
+
+    <TextView
+        android:id="@+id/no_events"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="У Вас пока нет событий :("
+        android:layout_centerInParent="true"
+        android:textSize="20dp"
+        android:fontFamily="@font/rubik"/>
+
+    <LinearLayout
+        android:id="@+id/events_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@drawable/top_shadow"/>
+
+            <Button
+                android:id="@+id/create_event"
+                style="@style/AppTheme.Button.Primary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="goToEventCreation"
+                android:text="Создать встречу"
+                android:layout_marginVertical="10dp"
+                android:layout_marginHorizontal="@dimen/page_padding"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

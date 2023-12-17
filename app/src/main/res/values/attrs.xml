@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="mainColor" format="reference" />
+    <attr name="customButtonColor" format="reference" />
+    <attr name="oppositeColor" format="reference" />
+    <attr name="buttonTextColor" format="reference" />
+    <attr name="middleColor" format="reference" />
+    <attr name="logoColor" format="reference" />
+    <attr name="shadowColor" format="reference" />
+    <attr name="contrastColor" format="reference" />
+
+    <attr name="brgrBackground" format="reference"/>
+    <attr name="brgrAccent" format="reference"/>
+    <attr name="brgrRegularText" format="reference"/>
+    <attr name="brgrTextOnAccent" format="reference"/>
+    <attr name="brgrLogoColor" format="reference"/>
+    <attr name="brgrShadowColor" format="reference"/>
+</resources>

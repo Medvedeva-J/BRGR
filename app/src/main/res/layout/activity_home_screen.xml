@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeScreen">
+
+    <LinearLayout
+        android:id="@+id/homescreen_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="@dimen/page_padding">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:cardElevation="10dp"
+            app:contentPadding="10dp"
+            android:outlineSpotShadowColor="?attr/brgrRegularText"
+            android:backgroundTint="?attr/brgrBackground">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/settings"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center_vertical|start"
+                android:background="@drawable/settings"
+                android:backgroundTint="?attr/brgrRegularText"
+                android:onClick="goToSettings"/>
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/rubik_bold"
+                android:text="хоумскрин"
+                android:textColor="?attr/brgrRegularText"
+                android:textSize="32dp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@drawable/bottom_shadow"
+            android:layout_below="@id/homescreen_header"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:onClick="goToEvents"
+            android:layout_marginVertical="10dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/events_button"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                app:icon="@drawable/calendar_icon"
+                android:background="@drawable/round_btn"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cousine"
+                android:text="Встречи"
+                android:textAllCaps="true"
+                android:layout_gravity="center"
+                android:textColor="?attr/brgrRegularText"
+                android:textSize="24sp">
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="goToGallery"
+            android:orientation="vertical"
+            android:layout_marginVertical="10dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/gallery_button"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                app:icon="@drawable/gallery_icon"
+                android:background="@drawable/round_btn"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cousine"
+                android:text="галерея"
+                android:textAllCaps="true"
+                android:layout_gravity="center"
+                android:textColor="?attr/brgrRegularText"
+                android:textSize="24sp">
+            </TextView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

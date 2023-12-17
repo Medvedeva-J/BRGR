@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUp"
+    android:orientation="vertical"
+    android:paddingLeft="30dp"
+    android:paddingRight="30dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/back_signUp"
+            android:layout_width="32dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="85dp"
+            android:background="@drawable/arrow"
+            android:onClick="goToMainActivity" />
+
+
+        <LinearLayout
+            android:id="@+id/header"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="50dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rubik_bold"
+                android:text="РЕГА"
+                android:textColor="#000000"
+                android:textSize="96sp">
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_below="@id/header">
+
+            <EditText
+                android:id="@+id/emailFireld_signUp"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_marginBottom="7.5dp"
+                android:background="@drawable/edit_text_border"
+                android:ems="50"
+                android:fontFamily="@font/cousine"
+                android:hint="E-mail"
+                android:inputType="textEmailAddress"
+                android:paddingLeft="10dp"
+                android:strokeWidth="@dimen/outline_width" />
+
+            <EditText
+                android:id="@+id/nameField_signUp"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_marginTop="7.5dp"
+                android:layout_marginBottom="7.5dp"
+                android:background="@drawable/edit_text_border"
+                android:ems="50"
+                android:fontFamily="@font/cousine"
+                android:hint="Имя пользователя"
+                android:inputType="textPersonName"
+                android:paddingLeft="10dp"
+                android:strokeWidth="@dimen/outline_width" />
+
+            <EditText
+                android:id="@+id/passwordField_signUp"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_marginTop="7.5dp"
+                android:layout_marginBottom="7.5dp"
+                android:background="@drawable/edit_text_border"
+                android:ems="50"
+                android:fontFamily="@font/cousine"
+                android:hint="Пароль"
+                android:inputType="textPassword"
+                android:paddingLeft="10dp"
+                android:strokeWidth="@dimen/outline_width" />
+
+            <Button
+                android:id="@+id/signUp_signUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/grey"
+                android:enabled="false"
+                android:fontFamily="@font/cousine"
+                android:onClick="goToMainActivity"
+                android:text="Зарегистрироваться"
+                android:textColor="@color/black"
+                app:cornerRadius="@dimen/corner_radius"
+                app:strokeColor="#000000"
+                app:strokeWidth="@dimen/outline_width" />
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>

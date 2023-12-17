@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Settings">
+
+    <LinearLayout
+        android:id="@+id/settings_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="@dimen/page_padding">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:cardElevation="10dp"
+            app:contentPadding="10dp"
+            android:backgroundTint="?attr/brgrBackground"
+            android:outlineSpotShadowColor="?attr/brgrRegularText">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/back_settings"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center_vertical|start"
+                android:background="@drawable/arrow"
+                android:backgroundTint="?attr/brgrRegularText"
+                android:onClick="goToHome"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/rubik_bold"
+                android:text="настройки"
+                android:textColor="?attr/brgrRegularText"
+                android:textSize="32dp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@drawable/bottom_shadow"
+            android:layout_below="@id/events_header"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/signOut_button"
+        style="@style/AppTheme.Button.Primary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:onClick="LogOut"
+        android:text="ВЫЙТИ" />
+
+</RelativeLayout>

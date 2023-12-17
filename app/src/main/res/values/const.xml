@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="corner_radius">10sp</dimen>
+    <dimen name="outline_width">2sp</dimen>
+    <dimen name="page_padding">30dp</dimen>
+    <integer name="outline_width">2</integer>
+</resources>

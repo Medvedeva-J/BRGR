@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_signUp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/page_padding"
+    tools:context=".SignUp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="50dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/back_signUp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/arrow"
+                android:backgroundTint="?attr/brgrLogoColor"
+                android:onClick="goToMainActivity"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rubik_bold"
+                android:text="РЕГА"
+                android:textColor="?attr/brgrLogoColor"
+                android:textSize="96sp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true">
+            </TextView>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/header"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/emailField_signUp"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/edit_text_border"
+                android:ems="50"
+                android:fontFamily="@font/cousine"
+                android:hint="E-mail"
+                android:inputType="textEmailAddress"
+                android:paddingLeft="10dp"
+                android:strokeWidth="@dimen/outline_width" />
+
+            <EditText
+                android:id="@+id/nameField_signUp"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/edit_text_border"
+                android:ems="50"
+                android:fontFamily="@font/cousine"
+                android:hint="Имя пользователя"
+                android:inputType="textPersonName"
+                android:paddingLeft="10dp"
+                android:strokeWidth="@dimen/outline_width" />
+
+            <EditText
+                android:id="@+id/passwordField_signUp"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/edit_text_border"
+                android:ems="50"
+                android:fontFamily="@font/cousine"
+                android:hint="Пароль"
+                android:inputType="textPassword"
+                android:paddingLeft="10dp"
+                android:strokeWidth="@dimen/outline_width" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/signUp_signUp"
+                style="@style/AppTheme.Button.Secondary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:fontFamily="@font/cousine"
+                android:onClick="sendData"
+                android:text="Зарегистрироваться"/>
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>

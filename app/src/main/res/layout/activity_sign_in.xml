@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_signIn"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/page_padding"
+    tools:context=".SignIn">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="50dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/back_signIn"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/arrow"
+                android:onClick="goToMainActivity"
+                android:backgroundTint="?attr/brgrLogoColor"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rubik_bold"
+                android:text="ВХОД"
+                android:textColor="?attr/brgrLogoColor"
+                android:textSize="96sp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true">
+            </TextView>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/sign_in_body"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/header"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/emailField_signIn"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:ems="50"
+                android:hint="E-mail"
+                android:inputType="textEmailAddress"
+                android:background="@drawable/edit_text_border"
+                android:layout_marginBottom="15dp"
+                android:paddingLeft="10dp"
+                android:fontFamily="@font/cousine"/>
+
+            <EditText
+                android:id="@+id/passwordField_signIn"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:ems="50"
+                android:hint="Пароль"
+                android:inputType="textPassword"
+                android:background="@drawable/edit_text_border"
+                android:layout_marginBottom="15dp"
+                android:paddingLeft="10dp"
+                android:fontFamily="@font/cousine"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/signIn_signIn"
+                style="@style/AppTheme.Button.Secondary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:text="Войти"/>
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>

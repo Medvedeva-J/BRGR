@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:id="@+id/item_element">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/page_padding"
+        android:paddingVertical="10dp"
+        app:layout_constraintBaseline_toBaselineOf="parent">
+
+    <LinearLayout
+        android:id="@+id/event_item_info"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_toLeftOf="@+id/toggle"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/event_item_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            app:layout_constraintTop_toTopOf="@+id/event_item_info"
+            app:layout_constraintLeft_toLeftOf="@+id/event_item_info"
+            android:text="MEOW"
+            android:fontFamily="@font/rubik_bold">
+        </TextView>
+
+        <TextView
+            android:id="@+id/event_item_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="little meowmeow"
+            android:fontFamily="@font/rubik">
+
+        </TextView>
+
+    </LinearLayout>
+
+        <com.codersroute.flexiblewidgets.FlexibleSwitch
+            android:id="@+id/toggle"
+            style="@style/Theme.BRGR.Switch"
+            android:layout_width="80dp"
+            android:layout_height="35dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:checked="true" />
+
+            </RelativeLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>

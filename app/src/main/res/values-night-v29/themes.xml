@@ -1,0 +1,78 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.BRGR" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+<!--        <item name="mainColor">@color/dark_blue</item>-->
+<!--        <item name="customButtonColor">@color/yellow</item>-->
+<!--        <item name="buttonTextColor">@color/black</item>-->
+<!--        <item name="oppositeColor">@color/light_blue</item>-->
+<!--        <item name="middleColor">@color/light_blue</item>-->
+<!--        <item name="logoColor">@color/yellow</item>-->
+<!--        <item name="shadowColor">@color/dark_theme_shadow</item>-->
+<!--        <item name="contrastColor">@color/black</item>-->
+        <item name="colorSecondary">@color/yellow</item>
+
+        <item name="brgrBackground">@color/dark_blue</item>
+        <item name="brgrAccent">@color/yellow</item>
+        <item name="brgrRegularText">@color/light_grey</item>
+        <item name="brgrTextOnAccent">@color/dark_blue</item>
+        <item name="brgrLogoColor">@color/yellow</item>
+        <item name="brgrShadowColor">@color/shadow_color</item>
+
+        <item name="android:forceDarkAllowed">false</item>
+
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+        <item name="android:windowBackground">@color/dark_blue</item>
+
+        <item name="materialButtonStyle">@style/Theme.BRGR.MaterialButton</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Theme.BRGR.MaterialButton" parent="android:Theme">
+        <item name="iconTint">?attr/brgrRegularText</item>
+        <item name="backgroundTint">@null</item>
+        <item name="iconGravity">textTop</item>
+        <item name="iconPadding">0dp</item>
+    </style>
+
+    <style name="AppTheme.Button.Secondary" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:backgroundTint">@android:color/transparent</item>
+        <item name="fontFamily">@font/cousine</item>
+        <item name="android:textColor">?attr/brgrRegularText</item>
+
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerRadius">@dimen/corner_radius</item>
+        <item name="strokeWidth">@dimen/outline_width</item>
+        <item name="strokeColor">?attr/brgrRegularText</item>
+    </style>
+
+    <style name="AppTheme.Button.Primary" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:backgroundTint">?attr/brgrAccent</item>
+        <item name="fontFamily">@font/cousine</item>
+        <item name="android:textColor">?attr/brgrTextOnAccent</item>
+
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerRadius">@dimen/corner_radius</item>
+        <item name="strokeWidth">@dimen/outline_width</item>
+        <item name="strokeColor">@android:color/transparent</item>
+    </style>
+
+    <style name="Theme.BRGR.Switch">
+        <item name="textOn">иду!</item>
+        <item name="textOff">.</item>
+        <item name="thumbColorOnSwitchOff">@color/white</item>
+        <item name="thumbColorOnSwitchOn">@color/white</item>
+        <item name="strokeColorOnSwitchOff">@color/dark_blue</item>
+        <item name="strokeColorOnSwitchOn">@color/dark_blue</item>
+        <item name="backgroundColorOnSwitchOff">@color/light_grey</item>
+        <item name="backgroundColorOnSwitchOn">@color/yellow</item>
+        <item name="textColorOnSwitchOn">@color/dark_blue</item>
+        <item name="textColorOnSwitchOff">@color/light_grey</item>
+        <item name="strokeWidth">5dp</item>
+        <item name="speed">100</item>
+        <item name="showText">true</item>
+        <item name="fontFamily">@font/rubik</item>
+    </style>
+</resources>
